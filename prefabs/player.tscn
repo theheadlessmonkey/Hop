@@ -20,6 +20,9 @@ animations = [{
 [node name="Player" type="RigidBody2D"]
 position = Vector2(-1, 1)
 input_pickable = true
+mass = 3.0
+gravity_scale = 2.0
+lock_rotation = true
 script = ExtResource("1_bdi82")
 metadata/_edit_group_ = true
 
@@ -30,6 +33,8 @@ shape = SubResource("RectangleShape2D_lpipv")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_xut8c")
+
+[node name="Camera2D" type="Camera2D" parent="."]
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
